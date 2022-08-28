@@ -28,8 +28,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'connect-to-pulsar',
-          routeBasePath: '/connect-to-pulsar',
+          path: 'connect',
+          routeBasePath: '/connect',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           sidebarPath: require.resolve('./sidebars.js'),
@@ -76,11 +76,16 @@ const config = {
             className: 'navbar-item',
             items: [
               {
-                to: '/connect-to-pulsar/overview',
+                to: '/connect/overview',
                 label: 'Connect to Pulsar',
                 className: 'navbar-item',
               },
-            ]
+              {
+                to: '/extension/overview',
+                label: 'Extend Pulsar',
+                className: 'navbar-item',
+              },
+            ],
           },
           {
             type: 'dropdown',
@@ -124,6 +129,18 @@ const config = {
         id: 'scenarios',
         path: 'scenarios',
         routeBasePath: '/scenarios',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        editUrl: 'https://github.com/tisonkun/pulsar-planet/tree/main',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'extension',
+        path: 'extension',
+        routeBasePath: '/extension',
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         sidebarPath: require.resolve('./sidebars.js'),
