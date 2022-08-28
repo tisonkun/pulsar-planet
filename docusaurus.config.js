@@ -66,7 +66,25 @@ const config = {
                 to: '/connect-to-pulsar',
                 label: 'Connect to Pulsar',
                 className: 'navbar-item',
-              }
+              },
+            ]
+          },
+          {
+            type: 'dropdown',
+            position: 'right',
+            label: 'COMMUNITY',
+            className: 'navbar-item',
+            items: [
+              {
+                to: 'https://pulsar-summit.org/',
+                label: 'Pulsar Summit Conference',
+                className: 'navbar-item',
+              },
+              {
+                to: 'https://github.com/apache/pulsar/discussions',
+                label: 'Ask the Community',
+                className: 'navbar-item',
+              },
             ]
           },
         ],
