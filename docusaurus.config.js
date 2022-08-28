@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Pulsar Planet',
-  tagline: 'Welcome to the Pulsar Planet!',
+  tagline: 'Welcome to The Pulsar Planet!',
   url: 'https://pulsar-planet.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -46,71 +46,55 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: undefined,
+        title: 'The Pulsar Planet',
         logo: {
           alt: 'Pulsar Planet Logo',
           src: 'img/logo.svg',
         },
         items: [
-          {type: 'doc', docId: 'intro', position: 'left', label: 'Tutorial'},
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'dropdown',
             position: 'right',
+            label: 'BUILD',
+            className: 'navbar-item',
+            items: [
+              {
+                to: '/connect-to-pulsar',
+                label: 'Connect to Pulsar',
+                className: 'navbar-item',
+              }
+            ]
           },
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        links: [],
+        copyright: `Copyright © ${new Date().getFullYear()} The Pulsar Planet Community. All Rights Reserved.<br/>`
+            + `Apache, Pulsar, Apache Pulsar, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+  themes: [
+      [require.resolve("@easyops-cn/docusaurus-search-local"), {hashed: true}],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'connect-to-pulsar',
+        path: 'connect-to-pulsar',
+        routeBasePath: '/connect-to-pulsar',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        editUrl: 'https://github.com/tisonkun/pulsar-planet/tree/main/',
+      },
+    ],
+  ]
 };
 
 module.exports = config;
