@@ -32,3 +32,8 @@
 .navbar-item {
   font-family: 'Source Code Pro', 'Arial', 'sans-serif';
 }
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
