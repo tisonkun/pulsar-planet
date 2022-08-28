@@ -59,7 +59,20 @@ const config = {
           {
             type: 'dropdown',
             position: 'right',
-            label: 'BUILD',
+            label: 'Learn',
+            className: 'navbar-item',
+            items: [
+              {
+                to: '/scenarios/overview',
+                label: 'Scenarios',
+                className: 'navbar-item',
+              },
+            ]
+          },
+          {
+            type: 'dropdown',
+            position: 'right',
+            label: 'Build',
             className: 'navbar-item',
             items: [
               {
@@ -72,7 +85,7 @@ const config = {
           {
             type: 'dropdown',
             position: 'right',
-            label: 'COMMUNITY',
+            label: 'Community',
             className: 'navbar-item',
             items: [
               {
@@ -104,7 +117,20 @@ const config = {
   themes: [
       [require.resolve("@easyops-cn/docusaurus-search-local"), {hashed: true}],
   ],
-  plugins: []
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'scenarios',
+        path: 'scenarios',
+        routeBasePath: '/scenarios',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        editUrl: 'https://github.com/tisonkun/pulsar-planet/tree/main',
+      },
+    ],
+  ]
 };
 
 module.exports = config;
