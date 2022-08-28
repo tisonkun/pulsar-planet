@@ -28,6 +28,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'connect-to-pulsar',
+          routeBasePath: '/connect-to-pulsar',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/tisonkun/pulsar-planet/tree/main',
         },
@@ -76,25 +80,13 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['java', 'http'],
       },
     }),
   themes: [
       [require.resolve("@easyops-cn/docusaurus-search-local"), {hashed: true}],
   ],
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'connect-to-pulsar',
-        path: 'connect-to-pulsar',
-        routeBasePath: '/connect-to-pulsar',
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        sidebarPath: require.resolve('./sidebars.js'),
-        editUrl: 'https://github.com/tisonkun/pulsar-planet/tree/main/',
-      },
-    ],
-  ]
+  plugins: []
 };
 
 module.exports = config;
