@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/quickstart/pulsar-local">
-            QUICK START
+            Quick Start - 5min ⏱️
           </Link>
         </div>
       </div>
