@@ -63,7 +63,7 @@ const config = {
             className: 'navbar-item',
             items: [
               {
-                to: '/connect-to-pulsar',
+                to: '/connect-to-pulsar/overview',
                 label: 'Connect to Pulsar',
                 className: 'navbar-item',
               },
