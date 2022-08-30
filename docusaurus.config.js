@@ -81,8 +81,8 @@ const config = {
                                 className: 'navbar-item',
                             },
                             {
-                                to: '/extension/overview',
-                                label: 'Extend Pulsar',
+                                to: '/integration/overview',
+                                label: 'Integrate with Pulsar',
                                 className: 'navbar-item',
                             },
                         ],
@@ -145,9 +145,9 @@ const config = {
         [
             '@docusaurus/plugin-content-docs',
             {
-                id: 'extension',
-                path: 'extension',
-                routeBasePath: '/extension',
+                id: 'integration',
+                path: 'integration',
+                routeBasePath: '/integration',
                 showLastUpdateAuthor: true,
                 showLastUpdateTime: true,
                 sidebarPath: require.resolve('./sidebars.js'),
